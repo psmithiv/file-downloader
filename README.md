@@ -2,9 +2,10 @@
 Command line based file download tool.
 
 # Project Setup
-* npm install
+* npm i -g typescript
 * npm i -g ts-node
 * npm i -g nexe
+* npm install
 
 # Style Guild
 * https://github.com/Platypi/style_typescript

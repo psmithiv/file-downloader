@@ -10,12 +10,12 @@ export default class Downloader {
     /**
      * Number of chunks to download
      */
-    private chunks: number;
+    private chunks: number = 0;
 
     /**
      * Output file name
      */
-    private output: string;
+    private output: string = '';
 
     /**
      * Initialize chunk downloader(s). Once all chunks are downloaded, merge

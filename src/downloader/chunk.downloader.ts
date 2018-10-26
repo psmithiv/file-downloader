@@ -18,8 +18,8 @@ export default class ChunkDownloader {
     downloadChunk(url: string, output: string, chunkSize: number, index: number) {
         const deferred = Q.defer();
 
-        const start = (chunkSize * index) + index;
-        const end = start + chunkSize;
+        const start = ((chunkSize - 1) * index) + index;
+        const end = start + (chunkSize - 1);
 
         const req = request({
             url: url,
