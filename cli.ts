@@ -25,16 +25,16 @@ class Main {
         });
 
         switch (true) {
-            case !args.u:
-                console.log(chalk.red('URL NOT SPECIFIED'));
-                break;
-
             case args.v:
                 console.log(`v${Config.VERSION}`);
                 break;
 
             case args.h:
                 console.log(HelpOutput);
+                break;
+
+            case !args.u:
+                console.log(chalk.red('URL NOT SPECIFIED'));
                 break;
 
             default:
