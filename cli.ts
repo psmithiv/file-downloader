@@ -3,6 +3,7 @@ import minimist = require("minimist");
 import HelpOutput from "./src/const/help.output";
 import Config from "./src/const/config";
 import Downloader from "./src/downloader/downloader";
+import chalk from "chalk";
 
 class Main {
 
@@ -24,6 +25,10 @@ class Main {
         });
 
         switch (true) {
+            case !args.u:
+                console.log(chalk.red('URL NOT SPECIFIED'));
+                break;
+
             case args.v:
                 console.log(`v${Config.VERSION}`);
                 break;
@@ -35,7 +40,7 @@ class Main {
             default:
                 const ds = new Downloader();
                 ds.download(
-                    args.url || Config.URL,
+                    args.u ? args.u : Config.URL,
                     args.c ? args.c: Config.CHUNKS,
                     args.o ? args.o : Config.OUTPUT,
                     args.s ? args.s : Config.CHUNK_SIZE
