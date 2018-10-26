@@ -1,0 +1,40 @@
+{
+  "name": "file-downloader",
+  "version": "1.0.0",
+  "description": "Command line based file download tool",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nexe -i cli.ts -o ./bin/downloader.exe"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psmithiv/file-downloader.git"
+  },
+  "author": "Paul C. Smith IV",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psmithiv/file-downloader/issues"
+  },
+  "homepage": "https://github.com/psmithiv/file-downloader#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "concat-files": "^0.1.1",
+    "core-js": "^2.5.7",
+    "minimist": "^1.2.0",
+    "progress": "^2.0.1",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "request-progress": "^3.0.0",
+    "typescript": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/core-js": "^2.5.0",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^10.12.0",
+    "@types/progress": "^2.0.1",
+    "@types/q": "^1.5.1",
+    "@types/request": "^2.47.1"
+  }
+}
